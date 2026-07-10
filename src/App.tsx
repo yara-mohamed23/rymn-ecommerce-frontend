@@ -16,6 +16,7 @@ import LuxuryButton from "./LuxuryButton";
 import RymnCardButton from "./RymnCardButton";
 import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
+import { CurrencySwitcher } from "./Components/CurrencySwitcher";
 
 const HomePage = () => {
   function addCard() {
@@ -31,6 +32,7 @@ const HomePage = () => {
   return (
     <>
         <Massage />
+        <CurrencySwitcher/>
         <UserCard
           name={"Yara"}
           job={" 🌕 "}

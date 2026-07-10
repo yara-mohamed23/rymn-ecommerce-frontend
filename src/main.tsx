@@ -16,14 +16,17 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx"; // ملف الـ App العادي بتاعك
 import { AuthProvider } from "./context/AuthProvider"; // 👈 السطر بتاعنا أهو
 import { BrowserRouter } from "react-router-dom"; // 👈 تأكدي إن السطر ده موجود
+import { CurrencyProvider } from "./context/CurrencyProvider.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <StrictMode>
     {/* 🎯 لفينا الـ AuthProvider حوالين الـ App كله من بره خالص أهو */}
+    <CurrencyProvider>
     <AuthProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </AuthProvider>
+    </CurrencyProvider>
   </StrictMode>,
 );
